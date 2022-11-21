@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+	<html>
+		<head> <title>try project</title> 
+
+		<style type="text/css">
+		#contain{
+			background-color: gold;
+			text-align: center;
+			margin: 200px 0px 50px 0px;
+			height: 30vh;
+			padding: 0px;
+			border-radius: 15px;
+			}
+			@media only screen and (max-width: 360px){
+				body{background-color: blue;
+				}}
+			
+			
+		</style>
+		
+		</head>
+		<body>
+			<center>
+				<div id="contain">
+					<h1 id="result1"> </h1>
+					<h1 id="result2"> </h1>
+			<form action="nice.php" method="post">
+
+Email:	<input type="email" name="email" id="email" required > <br> <br>
+
+Password:  <input type="password" name="password" id="psd" required > <br> <br>
+
+<input type="submit" id="btns" onclick="validation()">
+
+</form>
+</div>
+</center>
+<script>
+	
+
+function validation(){
+	var result = document.getElementById("email").value;
+var regex = /^([a-z A-Z 0-9 \. _]+)@([a-z A-Z]+).([a-z A-Z]{2,6})/g;
+var regex2 = /^([a-z A-Z 0-9]{6,8})/g;
+	if(regex && regex2.test(result)){
+		document.getElementById("result1").innerHTML = "Successful";
+		}
+		
+		else {
+			document.getElementById("result1").innerHTML = "Incorrect";
+}}
+
+
+
+
+</script>
+		
+		</body>
+		
+		
+		</html>
+			
